@@ -28,6 +28,7 @@ IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 
 
 # %% Cell 2: functions sent to ordinary PythonTask workers
+# Used only by the ordinary TaskVine PythonTask path.
 def classify_batch_cold(model_path, labels_path, batch_dir, top_k):
     """Load MobileNet in this task, then classify one image microbatch."""
     import os
@@ -80,10 +81,12 @@ def classify_batch_cold(model_path, labels_path, batch_dir, top_k):
         ) / np.array([0.229, 0.224, 0.225], dtype=np.float32)
         input_tensor = np.transpose(image_array, (2, 0, 1))[None, ...]
 
+        # MobileNet classification: run the normalized image through ONNX.
         scores = session.run(
             None,
             {session.get_inputs()[0].name: input_tensor},
         )[0].reshape(-1)
+        # Classification postprocessing: select the top ImageNet classes.
         probabilities = np.exp(scores - np.max(scores))
         probabilities /= probabilities.sum()
         best_indices = np.argsort(probabilities)[-top_k:][::-1]
@@ -113,6 +116,8 @@ def classify_batch_cold(model_path, labels_path, batch_dir, top_k):
 
 
 # %% Cell 3: functions used by the persistent serverless library
+# Used only by TaskVine Stateful Serverless Computing. This context function
+# initializes the persistent LibraryTask state.
 def load_mobilenet_library(model_path, labels_path):
     """Create one ONNX Runtime session when a library instance starts."""
     import os
@@ -148,6 +153,7 @@ def load_mobilenet_library(model_path, labels_path):
     }
 
 
+# FunctionCall tasks invoke this function through the persistent library.
 def classify_batch_stateful(batch_dir, top_k):
     """Classify a microbatch with the session already loaded in this process."""
     import os
@@ -185,10 +191,12 @@ def classify_batch_stateful(batch_dir, top_k):
         ) / np.array([0.229, 0.224, 0.225], dtype=np.float32)
         input_tensor = np.transpose(image_array, (2, 0, 1))[None, ...]
 
+        # MobileNet classification: reuse the library's ONNX session.
         scores = session.run(
             None,
             {session.get_inputs()[0].name: input_tensor},
         )[0].reshape(-1)
+        # Classification postprocessing: select the top ImageNet classes.
         probabilities = np.exp(scores - np.max(scores))
         probabilities /= probabilities.sum()
         best_indices = np.argsort(probabilities)[-top_k:][::-1]
