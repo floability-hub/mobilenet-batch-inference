@@ -2,146 +2,13 @@
   "dataset_id": "wikimedia_24",
   "dataset_version": "1",
   "execution_mode": "stateful-serverless",
-  "execution_mode_source": "environment variable MOBILENET_EXECUTION_MODE",
+  "execution_mode_source": "notebook configuration cell",
   "image_count": 24,
   "batch_size": 4,
   "batch_count": 6,
-  "elapsed_seconds": 7.171782420000454,
+  "elapsed_seconds": 87.21036469901446,
   "distinct_library_loads": 2,
   "task_results": [
-    {
-      "predictions": [
-        {
-          "image": "bananas.jpg",
-          "top_predictions": [
-            {
-              "class_index": 954,
-              "label": "banana",
-              "probability": 0.8761427998542786
-            },
-            {
-              "class_index": 939,
-              "label": "zucchini, courgette",
-              "probability": 0.05674917623400688
-            },
-            {
-              "class_index": 943,
-              "label": "cucumber, cuke",
-              "probability": 0.024157971143722534
-            },
-            {
-              "class_index": 942,
-              "label": "butternut squash",
-              "probability": 0.014883463270962238
-            },
-            {
-              "class_index": 940,
-              "label": "spaghetti squash",
-              "probability": 0.008121958002448082
-            }
-          ]
-        },
-        {
-          "image": "espresso.jpg",
-          "top_predictions": [
-            {
-              "class_index": 967,
-              "label": "espresso",
-              "probability": 0.9661603569984436
-            },
-            {
-              "class_index": 925,
-              "label": "consomme",
-              "probability": 0.017369801178574562
-            },
-            {
-              "class_index": 968,
-              "label": "cup",
-              "probability": 0.007045488804578781
-            },
-            {
-              "class_index": 809,
-              "label": "soup bowl",
-              "probability": 0.006555335130542517
-            },
-            {
-              "class_index": 504,
-              "label": "coffee mug",
-              "probability": 0.0012273782631382346
-            }
-          ]
-        },
-        {
-          "image": "flamingos.jpg",
-          "top_predictions": [
-            {
-              "class_index": 130,
-              "label": "flamingo",
-              "probability": 0.9935790300369263
-            },
-            {
-              "class_index": 132,
-              "label": "American egret, great white heron, Egretta albus",
-              "probability": 0.0029535042122006416
-            },
-            {
-              "class_index": 129,
-              "label": "spoonbill",
-              "probability": 0.0014077144442126155
-            },
-            {
-              "class_index": 134,
-              "label": "crane",
-              "probability": 0.0009083765908144414
-            },
-            {
-              "class_index": 127,
-              "label": "white stork, Ciconia ciconia",
-              "probability": 0.0007928443956188858
-            }
-          ]
-        },
-        {
-          "image": "golden-retriever.jpg",
-          "top_predictions": [
-            {
-              "class_index": 207,
-              "label": "golden retriever",
-              "probability": 0.9392777681350708
-            },
-            {
-              "class_index": 212,
-              "label": "English setter",
-              "probability": 0.020039070397615433
-            },
-            {
-              "class_index": 216,
-              "label": "clumber, clumber spaniel",
-              "probability": 0.013359952718019485
-            },
-            {
-              "class_index": 169,
-              "label": "borzoi, Russian wolfhound",
-              "probability": 0.011050132103264332
-            },
-            {
-              "class_index": 222,
-              "label": "kuvasz",
-              "probability": 0.005453771911561489
-            }
-          ]
-        }
-      ],
-      "library_load_id": "65540257",
-      "library_load_seconds": 0.08896975000061502,
-      "library_hostname": "e45435576910",
-      "library_pid": 52937,
-      "function_pid": 52937,
-      "call_seconds": 0.09079083300093771,
-      "task_id": 2,
-      "batch": "batch-00001",
-      "worker_address": "172.17.0.2:41856"
-    },
     {
       "predictions": [
         {
@@ -150,27 +17,27 @@
             {
               "class_index": 402,
               "label": "acoustic guitar",
-              "probability": 0.9639792442321777
+              "probability": 0.9639793634414673
             },
             {
               "class_index": 546,
               "label": "electric guitar",
-              "probability": 0.020501170307397842
+              "probability": 0.020501133054494858
             },
             {
               "class_index": 420,
               "label": "banjo",
-              "probability": 0.014985364861786366
+              "probability": 0.01498536579310894
             },
             {
               "class_index": 889,
               "label": "violin, fiddle",
-              "probability": 0.00035277404822409153
+              "probability": 0.000352772738551721
             },
             {
               "class_index": 486,
               "label": "cello, violoncello",
-              "probability": 0.00012347695883363485
+              "probability": 0.0001234769879374653
             }
           ]
         },
@@ -180,27 +47,27 @@
             {
               "class_index": 386,
               "label": "African elephant, Loxodonta africana",
-              "probability": 0.7210561633110046
+              "probability": 0.7210553884506226
             },
             {
               "class_index": 101,
               "label": "tusker",
-              "probability": 0.23252448439598083
+              "probability": 0.23252512514591217
             },
             {
               "class_index": 385,
               "label": "Indian elephant, Elephas maximus",
-              "probability": 0.046409107744693756
+              "probability": 0.0464092381298542
             },
             {
               "class_index": 343,
               "label": "warthog",
-              "probability": 3.6232761431165272e-06
+              "probability": 3.623289785537054e-06
             },
             {
               "class_index": 51,
               "label": "triceratops",
-              "probability": 1.9540257198968902e-06
+              "probability": 1.9540309494914254e-06
             }
           ]
         },
@@ -215,22 +82,22 @@
             {
               "class_index": 908,
               "label": "wing",
-              "probability": 0.005071435589343309
+              "probability": 0.005071425344794989
             },
             {
               "class_index": 895,
               "label": "warplane, military plane",
-              "probability": 0.0003438224666751921
+              "probability": 0.00034382115700282156
             },
             {
               "class_index": 403,
               "label": "aircraft carrier, carrier, flattop, attack aircraft carrier",
-              "probability": 5.230239548836835e-05
+              "probability": 5.230209353612736e-05
             },
             {
               "class_index": 812,
               "label": "space shuttle",
-              "probability": 1.8285778423887677e-05
+              "probability": 1.8285725673194975e-05
             }
           ]
         },
@@ -245,35 +112,35 @@
             {
               "class_index": 20,
               "label": "water ouzel, dipper",
-              "probability": 0.0010506033431738615
+              "probability": 0.0010505933314561844
             },
             {
               "class_index": 21,
               "label": "kite",
-              "probability": 0.0001810829999158159
+              "probability": 0.0001810817775549367
             },
             {
               "class_index": 23,
               "label": "vulture",
-              "probability": 4.4288950448390096e-05
+              "probability": 4.428890679264441e-05
             },
             {
               "class_index": 143,
               "label": "oystercatcher, oyster catcher",
-              "probability": 4.3735704821301624e-05
+              "probability": 4.3735453800763935e-05
             }
           ]
         }
       ],
-      "library_load_id": "a4ce2098",
-      "library_load_seconds": 0.08952216700163262,
-      "library_hostname": "e45435576910",
-      "library_pid": 52926,
-      "function_pid": 52926,
-      "call_seconds": 0.09830329200121923,
+      "library_load_id": "06f9b454",
+      "library_load_seconds": 0.05898187996353954,
+      "library_hostname": "d64cepyc028.crc.nd.edu",
+      "library_pid": 1922701,
+      "function_pid": 1922701,
+      "call_seconds": 0.05914515699259937,
       "task_id": 1,
       "batch": "batch-00000",
-      "worker_address": "172.17.0.2:41852"
+      "worker_address": "10.32.94.18:58450"
     },
     {
       "predictions": [
@@ -293,17 +160,17 @@
             {
               "class_index": 687,
               "label": "organ, pipe organ",
-              "probability": 4.6227467009885004e-07
+              "probability": 4.6227339112192567e-07
             },
             {
               "class_index": 401,
               "label": "accordion, piano accordion, squeeze box",
-              "probability": 2.1218923507149157e-07
+              "probability": 2.1218841084191808e-07
             },
             {
               "class_index": 593,
               "label": "harmonica, mouth organ, harp, mouth harp",
-              "probability": 2.967970980094492e-09
+              "probability": 2.9679538826599128e-09
             }
           ]
         },
@@ -318,12 +185,12 @@
             {
               "class_index": 304,
               "label": "leaf beetle, chrysomelid",
-              "probability": 0.16895852982997894
+              "probability": 0.16895851492881775
             },
             {
               "class_index": 306,
               "label": "rhinoceros beetle",
-              "probability": 0.0009401679853908718
+              "probability": 0.000940172525588423
             },
             {
               "class_index": 302,
@@ -348,22 +215,22 @@
             {
               "class_index": 321,
               "label": "admiral",
-              "probability": 0.00014788155385758728
+              "probability": 0.00014788169937673956
             },
             {
               "class_index": 322,
               "label": "ringlet, ringlet butterfly",
-              "probability": 2.0952493287040852e-05
+              "probability": 2.0952593331458047e-05
             },
             {
               "class_index": 325,
               "label": "sulphur butterfly, sulfur butterfly",
-              "probability": 1.0306614967703354e-05
+              "probability": 1.0306674084858969e-05
             },
             {
               "class_index": 326,
               "label": "lycaenid, lycaenid butterfly",
-              "probability": 8.0048521340359e-06
+              "probability": 8.00489851826569e-06
             }
           ]
         },
@@ -373,40 +240,173 @@
             {
               "class_index": 671,
               "label": "mountain bike, all-terrain bike, off-roader",
-              "probability": 0.9319417476654053
+              "probability": 0.9319418668746948
             },
             {
               "class_index": 444,
               "label": "bicycle-built-for-two, tandem bicycle, tandem",
-              "probability": 0.05926847830414772
+              "probability": 0.059268366545438766
             },
             {
               "class_index": 880,
               "label": "unicycle, monocycle",
-              "probability": 0.0032340283505618572
+              "probability": 0.0032340316101908684
             },
             {
               "class_index": 870,
               "label": "tricycle, trike, velocipede",
-              "probability": 0.0015929128276184201
+              "probability": 0.0015929099172353745
             },
             {
               "class_index": 535,
               "label": "disk brake, disc brake",
-              "probability": 0.0007019335171207786
+              "probability": 0.0007019301992841065
             }
           ]
         }
       ],
-      "library_load_id": "65540257",
-      "library_load_seconds": 0.08896975000061502,
-      "library_hostname": "e45435576910",
-      "library_pid": 52937,
-      "function_pid": 52937,
-      "call_seconds": 0.0681445829995937,
+      "library_load_id": "06f9b454",
+      "library_load_seconds": 0.05898187996353954,
+      "library_hostname": "d64cepyc028.crc.nd.edu",
+      "library_pid": 1922701,
+      "function_pid": 1922701,
+      "call_seconds": 0.042714767972938716,
       "task_id": 3,
       "batch": "batch-00002",
-      "worker_address": "172.17.0.2:41856"
+      "worker_address": "10.32.94.18:58450"
+    },
+    {
+      "predictions": [
+        {
+          "image": "bananas.jpg",
+          "top_predictions": [
+            {
+              "class_index": 954,
+              "label": "banana",
+              "probability": 0.8761426210403442
+            },
+            {
+              "class_index": 939,
+              "label": "zucchini, courgette",
+              "probability": 0.05674932897090912
+            },
+            {
+              "class_index": 943,
+              "label": "cucumber, cuke",
+              "probability": 0.024158034473657608
+            },
+            {
+              "class_index": 942,
+              "label": "butternut squash",
+              "probability": 0.014883474446833134
+            },
+            {
+              "class_index": 940,
+              "label": "spaghetti squash",
+              "probability": 0.00812196359038353
+            }
+          ]
+        },
+        {
+          "image": "espresso.jpg",
+          "top_predictions": [
+            {
+              "class_index": 967,
+              "label": "espresso",
+              "probability": 0.9661603569984436
+            },
+            {
+              "class_index": 925,
+              "label": "consomme",
+              "probability": 0.017369750887155533
+            },
+            {
+              "class_index": 968,
+              "label": "cup",
+              "probability": 0.007045488804578781
+            },
+            {
+              "class_index": 809,
+              "label": "soup bowl",
+              "probability": 0.006555323023349047
+            },
+            {
+              "class_index": 504,
+              "label": "coffee mug",
+              "probability": 0.001227375934831798
+            }
+          ]
+        },
+        {
+          "image": "flamingos.jpg",
+          "top_predictions": [
+            {
+              "class_index": 130,
+              "label": "flamingo",
+              "probability": 0.9935791492462158
+            },
+            {
+              "class_index": 132,
+              "label": "American egret, great white heron, Egretta albus",
+              "probability": 0.00295349326916039
+            },
+            {
+              "class_index": 129,
+              "label": "spoonbill",
+              "probability": 0.0014077131636440754
+            },
+            {
+              "class_index": 134,
+              "label": "crane",
+              "probability": 0.0009083758923225105
+            },
+            {
+              "class_index": 127,
+              "label": "white stork, Ciconia ciconia",
+              "probability": 0.0007928429404273629
+            }
+          ]
+        },
+        {
+          "image": "golden-retriever.jpg",
+          "top_predictions": [
+            {
+              "class_index": 207,
+              "label": "golden retriever",
+              "probability": 0.9392779469490051
+            },
+            {
+              "class_index": 212,
+              "label": "English setter",
+              "probability": 0.020039035007357597
+            },
+            {
+              "class_index": 216,
+              "label": "clumber, clumber spaniel",
+              "probability": 0.01335985492914915
+            },
+            {
+              "class_index": 169,
+              "label": "borzoi, Russian wolfhound",
+              "probability": 0.011050112545490265
+            },
+            {
+              "class_index": 222,
+              "label": "kuvasz",
+              "probability": 0.00545376306399703
+            }
+          ]
+        }
+      ],
+      "library_load_id": "52d19a29",
+      "library_load_seconds": 0.06538201402872801,
+      "library_hostname": "d64cepyc030.crc.nd.edu",
+      "library_pid": 1899644,
+      "function_pid": 1899644,
+      "call_seconds": 0.0508912168443203,
+      "task_id": 2,
+      "batch": "batch-00001",
+      "worker_address": "10.32.94.22:58982"
     },
     {
       "predictions": [
@@ -421,22 +421,22 @@
             {
               "class_index": 951,
               "label": "lemon",
-              "probability": 0.0022381520830094814
+              "probability": 0.002238156506791711
             },
             {
               "class_index": 942,
               "label": "butternut squash",
-              "probability": 1.8978514617629116e-06
+              "probability": 1.8978569187311223e-06
             },
             {
               "class_index": 953,
               "label": "pineapple, ananas",
-              "probability": 1.4685361975352862e-06
+              "probability": 1.468534605919558e-06
             },
             {
               "class_index": 607,
               "label": "jack-o'-lantern",
-              "probability": 1.2475302355596796e-06
+              "probability": 1.2475280755097629e-06
             }
           ]
         },
@@ -446,27 +446,27 @@
             {
               "class_index": 892,
               "label": "wall clock",
-              "probability": 0.8364496231079102
+              "probability": 0.8364492058753967
             },
             {
               "class_index": 409,
               "label": "analog clock",
-              "probability": 0.1251639574766159
+              "probability": 0.12516435980796814
             },
             {
               "class_index": 426,
               "label": "barometer",
-              "probability": 0.009412395767867565
+              "probability": 0.009412435814738274
             },
             {
               "class_index": 787,
               "label": "shield, buckler",
-              "probability": 0.0072927349247038364
+              "probability": 0.007292752619832754
             },
             {
               "class_index": 455,
               "label": "bottlecap",
-              "probability": 0.003964208532124758
+              "probability": 0.003964210860431194
             }
           ]
         },
@@ -481,22 +481,22 @@
             {
               "class_index": 985,
               "label": "daisy",
-              "probability": 0.0001652322825975716
+              "probability": 0.00016523292288184166
             },
             {
               "class_index": 946,
               "label": "cardoon",
-              "probability": 0.00015040797006804496
+              "probability": 0.0001504084066255018
             },
             {
               "class_index": 998,
               "label": "ear, spike, capitulum",
-              "probability": 0.00010447011300129816
+              "probability": 0.00010447081149322912
             },
             {
               "class_index": 944,
               "label": "artichoke, globe artichoke",
-              "probability": 3.8717178540537134e-05
+              "probability": 3.871743683703244e-05
             }
           ]
         },
@@ -506,40 +506,40 @@
             {
               "class_index": 277,
               "label": "red fox, Vulpes vulpes",
-              "probability": 0.9099405407905579
+              "probability": 0.9099408388137817
             },
             {
               "class_index": 278,
               "label": "kit fox, Vulpes macrotis",
-              "probability": 0.06469447910785675
+              "probability": 0.06469424068927765
             },
             {
               "class_index": 280,
               "label": "grey fox, gray fox, Urocyon cinereoargenteus",
-              "probability": 0.024978885427117348
+              "probability": 0.024978846311569214
             },
             {
               "class_index": 279,
               "label": "Arctic fox, white fox, Alopex lagopus",
-              "probability": 0.0002588152710814029
+              "probability": 0.0002588153292890638
             },
             {
               "class_index": 271,
               "label": "red wolf, maned wolf, Canis rufus, Canis niger",
-              "probability": 5.001149111194536e-05
+              "probability": 5.001131648896262e-05
             }
           ]
         }
       ],
-      "library_load_id": "a4ce2098",
-      "library_load_seconds": 0.08952216700163262,
-      "library_hostname": "e45435576910",
-      "library_pid": 52926,
-      "function_pid": 52926,
-      "call_seconds": 0.06780724999953236,
+      "library_load_id": "06f9b454",
+      "library_load_seconds": 0.05898187996353954,
+      "library_hostname": "d64cepyc028.crc.nd.edu",
+      "library_pid": 1922701,
+      "function_pid": 1922701,
+      "call_seconds": 0.040638898964971304,
       "task_id": 4,
       "batch": "batch-00003",
-      "worker_address": "172.17.0.2:41852"
+      "worker_address": "10.32.94.18:58450"
     },
     {
       "predictions": [
@@ -554,22 +554,22 @@
             {
               "class_index": 654,
               "label": "minibus",
-              "probability": 3.502206709526945e-06
+              "probability": 3.5022101201320766e-06
             },
             {
               "class_index": 705,
               "label": "passenger car, coach, carriage",
-              "probability": 1.2707386076726834e-06
+              "probability": 1.2707434962067055e-06
             },
             {
               "class_index": 468,
               "label": "cab, hack, taxi, taxicab",
-              "probability": 3.3588025871722493e-07
+              "probability": 3.3588187875466247e-07
             },
             {
               "class_index": 408,
               "label": "amphibian, amphibious vehicle",
-              "probability": 2.6738007363746874e-07
+              "probability": 2.673813526143931e-07
             }
           ]
         },
@@ -579,27 +579,27 @@
             {
               "class_index": 817,
               "label": "sports car, sport car",
-              "probability": 0.9512892961502075
+              "probability": 0.9512894153594971
             },
             {
               "class_index": 511,
               "label": "convertible",
-              "probability": 0.02094964124262333
+              "probability": 0.020949603989720345
             },
             {
               "class_index": 751,
               "label": "racer, race car, racing car",
-              "probability": 0.013588294386863708
+              "probability": 0.01358824409544468
             },
             {
               "class_index": 479,
               "label": "car wheel",
-              "probability": 0.010461807250976562
+              "probability": 0.01046178862452507
             },
             {
               "class_index": 436,
               "label": "beach wagon, station wagon, wagon, estate car, beach waggon, station waggon, waggon",
-              "probability": 0.0021957620047032833
+              "probability": 0.0021957538556307554
             }
           ]
         },
@@ -619,17 +619,17 @@
             {
               "class_index": 950,
               "label": "orange",
-              "probability": 0.0005162006127648056
+              "probability": 0.0005162016022950411
             },
             {
               "class_index": 953,
               "label": "pineapple, ananas",
-              "probability": 0.00045584270264953375
+              "probability": 0.00045584136387333274
             },
             {
               "class_index": 957,
               "label": "pomegranate",
-              "probability": 0.0004286626062821597
+              "probability": 0.00042866216972470284
             }
           ]
         },
@@ -639,40 +639,40 @@
             {
               "class_index": 281,
               "label": "tabby, tabby cat",
-              "probability": 0.45918890833854675
+              "probability": 0.4591889977455139
             },
             {
               "class_index": 282,
               "label": "tiger cat",
-              "probability": 0.38185685873031616
+              "probability": 0.3818569481372833
             },
             {
               "class_index": 285,
               "label": "Egyptian cat",
-              "probability": 0.13909873366355896
+              "probability": 0.1390986293554306
             },
             {
               "class_index": 287,
               "label": "lynx, catamount",
-              "probability": 0.014393477700650692
+              "probability": 0.014393453486263752
             },
             {
               "class_index": 622,
               "label": "lens cap, lens cover",
-              "probability": 0.0029467791318893433
+              "probability": 0.002946774009615183
             }
           ]
         }
       ],
-      "library_load_id": "65540257",
-      "library_load_seconds": 0.08896975000061502,
-      "library_hostname": "e45435576910",
-      "library_pid": 52937,
-      "function_pid": 52937,
-      "call_seconds": 0.06961591700019198,
+      "library_load_id": "06f9b454",
+      "library_load_seconds": 0.05898187996353954,
+      "library_hostname": "d64cepyc028.crc.nd.edu",
+      "library_pid": 1922701,
+      "function_pid": 1922701,
+      "call_seconds": 0.041482375003397465,
       "task_id": 5,
       "batch": "batch-00004",
-      "worker_address": "172.17.0.2:41856"
+      "worker_address": "10.32.94.18:58450"
     },
     {
       "predictions": [
@@ -682,27 +682,27 @@
             {
               "class_index": 849,
               "label": "teapot",
-              "probability": 0.9958196878433228
+              "probability": 0.9958195686340332
             },
             {
               "class_index": 505,
               "label": "coffeepot",
-              "probability": 0.0040301610715687275
+              "probability": 0.004030175972729921
             },
             {
               "class_index": 899,
               "label": "water jug",
-              "probability": 6.178086186992005e-05
+              "probability": 6.178091280162334e-05
             },
             {
               "class_index": 725,
               "label": "pitcher, ewer",
-              "probability": 5.0216560339322314e-05
+              "probability": 5.021669858251698e-05
             },
             {
               "class_index": 504,
               "label": "coffee mug",
-              "probability": 2.0013112589367665e-05
+              "probability": 2.0013188986922614e-05
             }
           ]
         },
@@ -717,22 +717,22 @@
             {
               "class_index": 667,
               "label": "mortarboard",
-              "probability": 0.00354203418828547
+              "probability": 0.003542020684108138
             },
             {
               "class_index": 400,
               "label": "academic gown, academic robe, judge's robe",
-              "probability": 8.746200910536572e-05
+              "probability": 8.746250387048349e-05
             },
             {
               "class_index": 672,
               "label": "mountain tent",
-              "probability": 2.225841126346495e-05
+              "probability": 2.2258516764850356e-05
             },
             {
               "class_index": 619,
               "label": "lampshade, lamp shade",
-              "probability": 9.771166332939174e-06
+              "probability": 9.771278200787492e-06
             }
           ]
         },
@@ -742,27 +742,27 @@
             {
               "class_index": 889,
               "label": "violin, fiddle",
-              "probability": 0.9434358477592468
+              "probability": 0.9434356689453125
             },
             {
               "class_index": 486,
               "label": "cello, violoncello",
-              "probability": 0.056563787162303925
+              "probability": 0.05656399205327034
             },
             {
               "class_index": 402,
               "label": "acoustic guitar",
-              "probability": 2.3406273896853236e-07
+              "probability": 2.340626963359682e-07
             },
             {
               "class_index": 420,
               "label": "banjo",
-              "probability": 9.150952706704629e-08
+              "probability": 9.150969049187552e-08
             },
             {
               "class_index": 546,
               "label": "electric guitar",
-              "probability": 1.983979736053243e-08
+              "probability": 1.9839866638449166e-08
             }
           ]
         },
@@ -777,35 +777,35 @@
             {
               "class_index": 292,
               "label": "tiger, Panthera tigris",
-              "probability": 0.0003189628478139639
+              "probability": 0.0003189631679560989
             },
             {
               "class_index": 351,
               "label": "hartebeest",
-              "probability": 0.0001533496251795441
+              "probability": 0.00015334991621784866
             },
             {
               "class_index": 352,
               "label": "impala, Aepyceros melampus",
-              "probability": 9.41122998483479e-05
+              "probability": 9.411274368176237e-05
             },
             {
               "class_index": 353,
               "label": "gazelle",
-              "probability": 4.6762659621890634e-05
+              "probability": 4.676288153859787e-05
             }
           ]
         }
       ],
-      "library_load_id": "a4ce2098",
-      "library_load_seconds": 0.08952216700163262,
-      "library_hostname": "e45435576910",
-      "library_pid": 52926,
-      "function_pid": 52926,
-      "call_seconds": 0.06979566700101714,
+      "library_load_id": "52d19a29",
+      "library_load_seconds": 0.06538201402872801,
+      "library_hostname": "d64cepyc030.crc.nd.edu",
+      "library_pid": 1899644,
+      "function_pid": 1899644,
+      "call_seconds": 0.047838146798312664,
       "task_id": 6,
       "batch": "batch-00005",
-      "worker_address": "172.17.0.2:41852"
+      "worker_address": "10.32.94.22:58982"
     }
   ]
 }
