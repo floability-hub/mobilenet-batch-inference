@@ -213,8 +213,8 @@ def classify_image_directory(session, labels, batch_dir, top_k):
     return predictions
 
 
-def classify_batch_cold(model_path, labels_path, batch_dir, top_k):
-    """Load MobileNet in this PythonTask, then classify one microbatch."""
+def classify_batch_with_new_session(model_path, labels_path, batch_dir, top_k):
+    """Load a new MobileNet session and classify one image microbatch."""
     import os
     import socket
     import time
@@ -236,8 +236,8 @@ def classify_batch_cold(model_path, labels_path, batch_dir, top_k):
     }
 
 
-def load_mobilenet_library(model_path, labels_path):
-    """Create one ONNX Runtime session when a library instance starts."""
+def initialize_mobilenet_library(model_path, labels_path):
+    """Initialize the reusable state for one MobileNet library process."""
     import os
     import socket
     import time
@@ -257,8 +257,8 @@ def load_mobilenet_library(model_path, labels_path):
     }
 
 
-def classify_batch_stateful(batch_dir, top_k):
-    """Classify a microbatch with the session already loaded in this process."""
+def classify_batch_with_shared_session(batch_dir, top_k):
+    """Classify a microbatch with the library's shared MobileNet session."""
     import os
     import time
 
@@ -306,8 +306,8 @@ def predictions_by_image(
     return {prediction["image"]: prediction for prediction in predictions}
 
 
-def library_reuse_by_id(results: Iterable[dict]) -> dict[str, list[str]]:
-    """Group completed stateful batches by persistent library load ID."""
+def group_batches_by_library_load(results: Iterable[dict]) -> dict[str, list[str]]:
+    """Group completed batches by the library instance that processed them."""
     reuse = defaultdict(list)
     for result in results:
         reuse[result["library_load_id"]].append(result["batch"])

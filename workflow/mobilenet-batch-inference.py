@@ -94,7 +94,7 @@ library_reuse = {}
 
 if execution_mode == "in-process":
     started_at = time.perf_counter()
-    local_result = mobilenet_helpers.classify_batch_cold(
+    local_result = mobilenet_helpers.classify_batch_with_new_session(
         str(MODEL_PATH),
         str(LABELS_PATH),
         str(IMAGE_DIR),
@@ -139,11 +139,11 @@ else:
     if execution_mode == "stateful-serverless":
         library = manager.create_library_from_functions(
             LIBRARY_NAME,
-            mobilenet_helpers.classify_batch_stateful,
+            mobilenet_helpers.classify_batch_with_shared_session,
             add_env=False,
             exec_mode="direct",
             library_context_info=[
-                mobilenet_helpers.load_mobilenet_library,
+                mobilenet_helpers.initialize_mobilenet_library,
                 ["model.onnx", "labels.txt"],
                 {},
             ],
@@ -160,7 +160,7 @@ else:
     for batch_path in batch_paths:
         if execution_mode == "python-task":
             task = vine.PythonTask(
-                mobilenet_helpers.classify_batch_cold,
+                mobilenet_helpers.classify_batch_with_new_session,
                 "model.onnx",
                 "labels.txt",
                 "batch",
@@ -171,7 +171,7 @@ else:
         else:
             task = vine.FunctionCall(
                 LIBRARY_NAME,
-                "classify_batch_stateful",
+                "classify_batch_with_shared_session",
                 "batch",
                 TOP_K,
             )
@@ -222,7 +222,7 @@ else:
     elapsed_seconds = time.perf_counter() - started_at
 
     if execution_mode == "stateful-serverless":
-        library_reuse = mobilenet_helpers.library_reuse_by_id(results)
+        library_reuse = mobilenet_helpers.group_batches_by_library_load(results)
         print(f"[stateful] Persistent library instances: {len(library_reuse)}")
         for load_id, batches in sorted(library_reuse.items()):
             print(f"[stateful]   {load_id}: {len(batches)} microbatch(es)")
